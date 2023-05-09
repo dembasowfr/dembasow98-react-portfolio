@@ -10,6 +10,30 @@ body {
 }
 
 
+/*MAIN LOGO TYPEWRITING*/
+.blinking-cursor::after{
+  content: '|';
+  animation: blink 1s step-start infinite;
+  @apply font-general-variable;
+  @apply text-3xl;
+  @apply leading-5
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.logo-typewriter{
+  @apply leading-7;
+  font-family: 'GeneralSans-Variable';
+}
+
 @font-face {
 	font-family: 'GeneralSans-Variable';
 	src: url('./fonts/GeneralSans-Variable.woff2') format('woff2'),

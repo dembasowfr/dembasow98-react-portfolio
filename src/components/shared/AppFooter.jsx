@@ -31,7 +31,7 @@ const socialLinks = [
 	{
 		id: 5,
 		icon: <FiYoutube />,
-		url: 'https://www.youtube.com@dembashow',
+		url: 'https://www.youtube.com/@dembashow',
 	},
 ];
 

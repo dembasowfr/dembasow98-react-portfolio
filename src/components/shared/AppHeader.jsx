@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
@@ -35,6 +35,19 @@ const AppHeader = () => {
 			setShowModal(false);
 		}
 	}
+	const name = 'DEMBA SOW';
+	//Function for the logo type writer effect
+	const [typedName, setTypedName] = useState('');
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setTypedName(name.slice(0, typedName.length + 1));
+		}, 200);
+
+		return () => clearTimeout(timeout);
+	}, [typedName]);
+
+
 
 	return (
 		<motion.nav
@@ -46,20 +59,47 @@ const AppHeader = () => {
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between rounded-full items-center px-4 sm:px-0">
-					<div>
+					<div className = "md:w-72 w-56 md:h-20 ">
 						<Link to="/">
 							{activeTheme === 'dark' ? (
-								<img
-									src={logoDark}
-									className="w-2 rounded-full"
-									alt="Dark Logo"
-								/>
+								<div className='flex items-center'>
+									<img
+										src={logoDark}
+										className="w-10 rounded-full"
+										alt="Dark Logo"
+									/>
+									<span class="text-gray-700 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
+									
+										&lt;
+
+										<span className = "logo-typewriter blinking-cursor">
+											{typedName}
+										</span>
+										/&gt;
+									
+									</span>
+
+								</div>
+								
 							) : (
-								<img
-									src={logoLight}
-									className="w-2 rounded-full"
-									alt="Dark Logo"
-								/>
+								<div className='flex items-center'>
+									<img
+										src={logoLight}
+										className="w-10 rounded-full"
+										alt="Dark Logo"
+									/>
+									<span class="text-gray-200 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
+									
+										&lt;
+
+										<span className = "logo-typewriter blinking-cursor ">
+											{typedName}
+										</span>
+										/&gt;
+									
+									</span>
+
+								</div>
 							)}
 						</Link>
 					</div>

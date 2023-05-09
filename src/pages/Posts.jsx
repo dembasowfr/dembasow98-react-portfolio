@@ -3,7 +3,7 @@ import Post from './Post'
 
 const Posts = () => {
   return (
-    <div className='w-full h-fit items-center justify-center flex flex-col'>
+    <div className='w-full h-screen items-center justify-center flex flex-col'>
         {
             //Add a funny gif here showing that this page is under development
         }
