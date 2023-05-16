@@ -68,7 +68,7 @@ const AppHeader = () => {
 										className="w-10 rounded-full"
 										alt="Dark Logo"
 									/>
-									<span class="text-gray-700 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
+									<span className="text-gray-700 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
 									
 										&lt;
 
@@ -88,7 +88,7 @@ const AppHeader = () => {
 										className="w-10 rounded-full"
 										alt="Dark Logo"
 									/>
-									<span class="text-gray-200 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
+									<span className="text-gray-200 font-bold text-xl md:text-2xl xl:text-3xl line-height-4 ml-2">
 									
 										&lt;
 
@@ -164,7 +164,7 @@ const AppHeader = () => {
 					</Link>
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
 						aria-label="Projects"
 					>
 						Projects
