@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#All the files that ends with .docx
+*.docx
+
 # testing
 /coverage
 
