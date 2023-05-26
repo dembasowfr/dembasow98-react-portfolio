@@ -6,6 +6,7 @@ import { clientsData as clientsDataJson } from '../data/clientsData';
 const AboutMeContext = createContext();
 
 export const AboutMeProvider = ({ children }) => {
+	
 	const [aboutMe, setAboutMe] = useState(aboutMeData);
 
 	const clientsHeading = clientsPageHeading;
