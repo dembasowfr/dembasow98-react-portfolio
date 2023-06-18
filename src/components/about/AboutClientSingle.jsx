@@ -1,6 +1,6 @@
 const AboutClientSingle = ({id, profile, name, surname, job, nationality, feedback }) => {
 	return (
-		<section key = {id} class="rounded overflow-hidden shadow-lg max-w-sm text-primary-dark dark:text-primary-light bg-primary-light dark:bg-ternary-dark">
+		<section key = {id} class="rounded max-w-sm text-primary-dark dark:text-primary-light">
 			<div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
 				<figure class="max-w-screen-md mx-auto">
 					<figcaption class="flex flex-col items-center justify-center mt-6 space-x-3">

@@ -25,12 +25,12 @@ const AboutClients = () => {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
-
-
+		arrows:false
+		
 	};
 
 	return (
-		<div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-20">
+		<div className="w-full  flex flex-col items-center justify-center mt-10 sm:mt-20">
 			
 			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
 				{clientsHeading}
