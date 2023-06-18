@@ -18,35 +18,38 @@ const AboutClients = () => {
 	}
 
 	const settings = {
-		dots: false,
+		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 2000,
+
+
 	};
 
 	return (
-		<div className="mt-10 sm:mt-20">
+		<div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-20">
+			
 			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
 				{clientsHeading}
 			</p>
-			<div className="grid grid-cols-1 sm:grid-cols-4 mt-10 sm:mt-14 gap-2 ">
-			<Slider {...settings}>
-				{clientsData.map((client) => (
-					<AboutClientSingle
-						key={client.id}
-						profile={client.profile}
-						name={client.name}
-						surname={client.surname}
-						job={client.job}
-						nationality = {client.nationality}
-						feedback = {client.feedback}
-					/>
-				))}
+			<div className="max-w-[380px] mt-10 sm:mt-14">
+				<Slider {...settings}>
+					{clientsData.map((client) => (
+						<AboutClientSingle
+							key={client.id}
+							profile={client.profile}
+							name={client.name}
+							surname={client.surname}
+							job={client.job}
+							nationality = {client.nationality}
+							feedback = {client.feedback}
+						/>
+					))}
 
-			</Slider>
+				</Slider>
 			</div>
 		</div>
 	);
