@@ -17,42 +17,43 @@ export const AboutMeProvider = ({ children }) => {
 	const clientsHeading = clientsPageHeading;
 
 	const [clientsData, setClientsData] = useState(null);
+	
 
+	async function fetchAboutMeData (){
 
-	useEffect(() => {
-
-		const fetchAboutMeData = async () => {
-			//Get the about me data
+		try{
 			const aboutMeData = await getAboutMeData();
-
-			//Set the about me data
 			setAboutMe(aboutMeData);
+			//console.log("About Me Data: ", aboutMeData);
+		}
+		catch(error){
+			console.log("Error on fetching the about data:",error);
+		}
+	};
 
-			
-		};
+	async function fetchClientsData (){
+		try{
+			const clientsData = await getClientsData();
+			setClientsData(clientsData);
+			//console.log("Clients Data: ",clientsData);
+		}
+		catch(error){
+			console.log("Error on fetching the client data: ", error);
+		}
+	};
 
-		fetchAboutMeData();
-	}, []);
 
 	useEffect(() => {
-		
-		const fetchClientsData = async () => {
-			//Get the clients data
-			const clientsData = await getClientsData();
-
-			//Set the clients data
-			setClientsData(clientsData);
-
-		}
-
+		fetchAboutMeData();
 		fetchClientsData();
-	}, []);
+	}, [aboutMe, clientsData]);
 
 	
 
 	return (
 		<AboutMeContext.Provider 
 			value={{
+
 				aboutMe,
 				setAboutMe,
 				clientsHeading,

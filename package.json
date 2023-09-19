@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "proxy": "http://16.171.42.143:8000",
+    "proxy": "http://127.0.0.1:8000",
     "axios": "^1.4.0",
     "framer-motion": "^10.12.8",
     "react": "^18.2.0",
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^2.0.6",
     "tailwindcss": "^3.3.2"
   }
 }
